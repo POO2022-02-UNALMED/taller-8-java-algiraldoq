@@ -1,10 +1,10 @@
 package futbol;
 
-public abstract class Jugador extends Futbolista{
+public class Jugador extends Futbolista{
 	public short golesMarcados;
 	public byte dorsal;
 	
-	public Jugador(String nombre, Integer edad, String posicion,
+	public Jugador(String nombre, int edad, String posicion,
 			short golesMarcados, byte dorsal) {
 		super(nombre, edad, posicion);
 		this.golesMarcados = golesMarcados;
@@ -31,7 +31,7 @@ public abstract class Jugador extends Futbolista{
 	}
 
 	@Override
-	public Integer compareTo(Object comparacion) {
-		return Math.abs(this.getEdad() - ((Futbolista) comparacion).getEdad());
+	public int compareTo(Object o) {
+		return Math.abs(this.getEdad() - ((Futbolista) o).getEdad());
 	}
 }
